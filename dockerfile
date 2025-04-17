@@ -6,9 +6,9 @@ WORKDIR /app
 
 # 必要なパッケージをインストール（ffmpegも含む）
 RUN apt-get update && apt-get install -y \
-    ffmpeg \
-    libsndfile1 \
-    && rm -rf /var/lib/apt/lists/*
+  build-essential \
+  make \
+  g++
 
 # プロジェクトの依存関係をコピー
 COPY package*.json ./
