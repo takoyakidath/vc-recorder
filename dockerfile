@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
     make \
     g++ \
     python3 \
-    python3-pip
+    python3-pip \ 
+    ffmpeg 
 
 
 # プロジェクトの依存関係をコピー
