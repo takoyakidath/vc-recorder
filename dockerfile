@@ -5,10 +5,14 @@ FROM node:20-slim
 WORKDIR /app
 
 # 必要なパッケージをインストール（ffmpegも含む）
+
 RUN apt-get update && apt-get install -y \
-  build-essential \
-  make \
-  g++
+    build-essential \
+    make \
+    g++ \
+    python3 \
+    python3-pip
+
 
 # プロジェクトの依存関係をコピー
 COPY package*.json ./
