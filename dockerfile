@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 COPY package*.json ./
 
 # Node.jsの依存パッケージをインストール
-RUN npm install --production
+RUN npm install 
 
 # .env ファイルをコピー
 COPY .env .env
